@@ -3,129 +3,57 @@
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title> 
-	<style type="text/css">
-	*{
-		margin:0px;
-		padding:0px;
-	}
-	body{
-		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
-	}
-
-	/**
-	 *打包lodding按钮
-	 */
-	.loddingIconBox{
-		height:160px;
-		margin:100px 0px;
-		display:block;
-	}
-	.loddingIcon{
-		cursor:pointer;
-		width:160px;
-		height:160px;
-		margin:0 auto;
-		position:relative;
-	}
-	.absolute{
-		position:absolute;
-	}
-	.circle{
-		width:160px;
-		height:160px;
-		left:0px;
-		top:0px;
-		background:url(images/loddingIcon.png) no-repeat;
-		background-size:160px 160px;
-	}
-	.shadow{
-		width:120px;
-		height:120px;
-		left:50%;
-		top:50%;
-		margin:-60px 0px 0px -60px;
-		background:url(images/shadow.png) no-repeat;
-		background-size:120px 120px;
-	}
-	.gearBig{
-		width:100px;
-		height:100px;
-		left:50%;
-		top:50%;
-		margin:-50px 0px 0px -50px;
-		background:url(images/big.png) no-repeat;
-		background-size:100px 100px;
-	}
-	.gearBigAnimation{
-		-webkit-animation-name: loading;
-		-webkit-animation-duration: 2.4s;
-		-webkit-animation-iteration-count: infinite;
-		-webkit-animation-timing-function: linear;
-	}
-	.gearSmall{
-		width:60px;
-		height:60px;
-		left:50%;
-		top:50%;
-		margin:-30px 0px 0px -30px;
-		background:url(images/small.png) no-repeat;
-		background-size:60px 60px;
-	}
-	.gearSmallAnimation{
-		-webkit-animation-name: loadingreturn;
-		-webkit-animation-duration: 5.4s;
-		-webkit-animation-iteration-count: infinite;
-		-webkit-animation-timing-function: linear;
-	}
-	.bg{
-		background:#4f4f4f;
-		width:140px;
-		height:140px;
-		border-radius:50%;
-		left:50%;
-		top:50%;
-		margin:-70px 0px 0px -70px;
-	}
-
-	/**
-	 *动画类
-	 */
-	@-webkit-keyframes loading {
-		from { -webkit-transform: rotate(0deg) translateZ(0); }
-		to { -webkit-transform: rotate(360deg) translateZ(0); }
-	}
-	@-webkit-keyframes loadingreturn {
-		from { -webkit-transform: rotate(360deg) translateZ(0); }
-		to { -webkit-transform: rotate(0deg) translateZ(0); }
-	}
-	@-webkit-keyframes uploadBtn {
-		from { 
-			-webkit-transform: translateY(0px); 
-			opacity:1;
-		}
-		to { 
-			-webkit-transform: translateY(-50px); 
-			opacity:0;
-		}
-	}
-	</style>	
-	<script type="text/javascript" src="../js/jquery.js"></script>
-	<script type="text/javascript" src="../js/common.js"></script>
+	<title></title> 	
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="jQuery.xl.lodding.js"></script>
+	<link rel="stylesheet" href="jQuery.xl.lodding.css">	
 	<script type="text/javascript">
+	$(function(){
+		var lodding = $('.icon').getLodding();
+
+		$('.move').click(function(){
+			lodding.startMove('a','1s');
+			lodding.startMove('b','2s');
+			lodding.startMove('c','3s');
+			lodding.startMove('d','4s');
+			lodding.startMove('e','5s');
+		});
+
+		$('.stop').click(function(){
+			lodding.stopMove('a');
+			lodding.stopMove('b');
+			lodding.stopMove('c');
+			lodding.stopMove('d');
+			lodding.stopMove('e');
+		});
+
+	});
 	</script>
 </head>
 <body>	
-	<div class="ipa-builder">
-		<div class="loddingIconBox">
-			<div class="loddingIcon">
-				<div class="bg absolute"></div>
-				<div class="gearSmall gearSmallAnimation absolute"></div>
-				<div class="gearBig gearBigAnimation absolute"></div>
-				<div class="shadow absolute"></div>
-				<div class="circle absolute"></div>
-			</div>
-		</div>
-	</div>
+	<input class="move" type="button" value="开始转动">
+	<input class="stop" type="button" value="停止转动">
+	<div class="icon" _id="a"></div>
+	<div class="icon" _id="b"></div>
+	<div class="icon" _id="c"></div>
+	<div class="icon" _id="d"></div>
+	<div class="icon" _id="e"></div>
+	<div class="icon" _id="f"></div>
+	<div class="icon" _id="g"></div>
+	<div class="icon" _id="h"></div>
+	<div class="icon" _id="i"></div>
+	<div class="icon" _id="j"></div>
+	<div class="icon" _id="k"></div>
+	<div class="icon" _id="l"></div>
+	<div class="icon" _id="m"></div>
+	<div class="icon" _id="n"></div>
+	<div class="icon" _id="o"></div>
+	<div class="icon" _id="p"></div>
+	<div class="icon" _id="q"></div>
+	<div class="icon" _id="r"></div>
+	<div class="icon" _id="s"></div>
+	<div class="icon" _id="t"></div>
+	<div class="icon" _id="u"></div>
+	<div class="icon" _id="v"></div>
 </body>
 </html>
