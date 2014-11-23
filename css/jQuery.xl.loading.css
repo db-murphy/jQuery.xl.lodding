@@ -18,7 +18,7 @@
 .gearSmall{
 	width:60px;
 	height:60px;
-	background:url(images/small.png) no-repeat;
+	background:url(../images/small.png) no-repeat;
 	background-size:60px 60px;
 	margin:-30px 0px 0px -30px;
 	position:absolute;
@@ -28,7 +28,7 @@
 .gearBig{
 	width:100px;
 	height:100px;
-	background:url(images/big.png) no-repeat;
+	background:url(../images/big.png) no-repeat;
 	background-size:100px 100px;
 	margin:-50px 0px 0px -50px;
 	position:absolute;
@@ -39,7 +39,7 @@
 	width:120px;
 	height:120px;
 	margin:-60px 0px 0px -60px;
-	background:url(images/shadow.png) no-repeat;
+	background:url(../images/shadow.png) no-repeat;
 	background-size:120px 120px;
 	position:absolute;
 	left:50%;
@@ -51,7 +51,7 @@
 	height:160px;
 	left:0px;
 	top:0px;
-	background:url(images/loddingIcon.png) no-repeat;
+	background:url(../images/loddingIcon.png) no-repeat;
 	background-size:160px 160px;
 }
 .startMoveRevolve{

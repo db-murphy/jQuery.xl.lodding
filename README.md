@@ -1,39 +1,58 @@
-#jQuery.xl.lodding
+#jQuery.xl.loading
 
-jQuery.xl.lodding是基于`jquery`,`css3`的一个lodding组件
+jQuery.xl.loading是基于`jquery`,`css3`的一个loading组件。
 
 ## Usages
 
-###引入库文件
+引入库文件
 
-	jQuery.xl.lodding.css
-	jQuery.xl.lodding.js
-	./images
+	<script type="text/javascript" src="../src/jquery.js"></script>
+	<script type="text/javascript" src="../js/jQuery.xl.loading.js"></script>
+	<link rel="stylesheet" href="../css/jQuery.xl.loading.css">
 
-###html结构
+##Example
+
+	<script type="text/javascript">
+	$(function(){
+		var loading = $('.icon').getLoading();
+
+		$('.move').click(function(){
+			loading.startMove('a','1s');
+		});
+
+		$('.stop').click(function(){
+			loading.stopMove('a');
+		});
+
+	});
+	</script>
+	
+	<div class="icon" _id="a"></div>
+
+html结构
 
 	<div class="icon" _id="a"></div>
 	
 `class`值任意，`_id`的值任意
 
-###渲染出lodding图标
+渲染出loading图标
 
-	var lodding = $('.icon').getLodding();
+	var loading = $('.icon').getLoading();
 	
 此时生成的图标是静止的
 
-###调用语句开始转动lodding
+调用语句开始转动loading
 
-	lodding.startMove(target,speed);
+	loading.startMove(target,speed);
 	
 参数说明
 
 1. `target`是需要转动的目标，由自定义属性`_id`决定
 2. `speed`图标转动的速度，传入类型`String`
 
-###调用语句停止转动
+调用语句停止转动
 
-	lodding.stopMove(target);
+	loading.stopMove(target);
 	
 参数说明
 

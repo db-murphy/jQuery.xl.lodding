@@ -16,14 +16,35 @@
 
     };
 
-    function createLoddingPart (lodingBox, className){
+    function loadingCreate (loadingBox){
+        //给lodding盒子添加样式
+        loadingBox.addClass('loddingBox');
+
+        //给lodding创建黑色背景
+        createLoadingPart(loadingBox, 'blackBg');
+
+        //添加小齿轮
+        createLoadingPart(loadingBox, 'gearSmall');
+
+        //添加大齿轮
+        createLoadingPart(loadingBox, 'gearBig');
+
+        //添加阴影
+        createLoadingPart(loadingBox, 'shadow');
+
+        //添加圆角图标
+        createLoadingPart(loadingBox, 'circle');
+    };
+
+    function createLoadingPart (lodingBox, className){
     	var part = document.createElement('div');
 
     	$(part).addClass(className);
     	lodingBox.append(part);
     };
 
-    function createMethodForLodding (_that){
+    function createMethodForLoading (_that){
+        //开始转动
     	_that.startMove = function (target, speed){
     		_that.each(function (index, dom){
     			if($(dom).attr('_id') == target){
@@ -39,6 +60,7 @@
     		});
     	};
 
+        //停止转动
     	_that.stopMove = function (target){
     		_that.each(function (index, dom){
     			if($(dom).attr('_id') == target){
@@ -50,48 +72,25 @@
     };
 
     //jquery plugin
-	$.fn.getLodding = function(options) {  
+	$.fn.getLoading = function(options) {  
 
-		var opts = $.extend({}, $.fn.getLodding.defaults, options);
+		var opts = $.extend({}, $.fn.getLoading.defaults, options);
 
 		//此jquery对象添加私有方法
-		createMethodForLodding(this);
+		createMethodForLoading(this);
 
 		//start plugin here
 		return this.each(function() { 
 
-			var lodingBox = $(this);
+			var loadingBox = $(this);
 
-			//给lodding盒子添加样式
-	    	lodingBox.addClass('loddingBox');
-
-	    	//给lodding创建黑色背景
-	    	createLoddingPart(lodingBox, 'blackBg');
-
-	    	//添加小齿轮
-	    	createLoddingPart(lodingBox, 'gearSmall');
-
-	    	//添加大齿轮
-	    	createLoddingPart(lodingBox, 'gearBig');
-
-	    	//添加阴影
-	    	createLoddingPart(lodingBox, 'shadow');
-
-	    	//添加圆角图标
-	    	createLoddingPart(lodingBox, 'circle');
+            loadingCreate(loadingBox);
 
 		});
 		//end this.each 
 	};
 
     //插件的默认参数    
-	$.fn.getLodding.defaults = {
-		lodingSize:{
-			width:100,
-			height:100
-		},
-		gearSmallSpeed:'5',
-		gearBigSpeed:'5'
-    };  
+	$.fn.getLoading.defaults = {};  
     
 })(jQuery);
