@@ -17,32 +17,34 @@
     };
 
     function loadingCreate (loadingBox){
+
         //给lodding盒子添加样式
         loadingBox.addClass('loddingBox');
 
         //给lodding创建黑色背景
-        createLoadingPart(loadingBox, 'blackBg');
+        createLoadingPart('blackBg');
 
         //添加小齿轮
-        createLoadingPart(loadingBox, 'gearSmall');
+        createLoadingPart('gearSmall');
 
         //添加大齿轮
-        createLoadingPart(loadingBox, 'gearBig');
+        createLoadingPart('gearBig');
 
         //添加阴影
-        createLoadingPart(loadingBox, 'shadow');
+        createLoadingPart('shadow');
 
         //添加圆角图标
-        createLoadingPart(loadingBox, 'circle');
+        createLoadingPart('circle');
+
+        function createLoadingPart (className){
+            var part = document.createElement('div');
+
+            $(part).addClass(className);
+            loadingBox.append(part);
+        };
     };
 
-    function createLoadingPart (lodingBox, className){
-    	var part = document.createElement('div');
-
-    	$(part).addClass(className);
-    	lodingBox.append(part);
-    };
-
+    //为对象添加私有方法
     function createMethodForLoading (_that){
         //开始转动
     	_that.startMove = function (target, speed){

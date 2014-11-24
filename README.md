@@ -6,8 +6,8 @@ jQuery.xl.loading是基于`jquery`,`css3`的一个loading组件。
 
 引入库文件
 
-	<script type="text/javascript" src="../src/jquery.js"></script>
-	<script type="text/javascript" src="../js/jQuery.xl.loading.js"></script>
+	<script type="text/javascript" src="../lib/jquery.js"></script>
+	<script type="text/javascript" src="../src/jQuery.xl.loading.js"></script>
 	<link rel="stylesheet" href="../css/jQuery.xl.loading.css">
 
 ##Example
