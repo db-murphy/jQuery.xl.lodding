@@ -1,0 +1,116 @@
+.loddingBox{
+	cursor:pointer;
+	width:160px;
+	height:160px;
+	position:relative;
+	display:inline-block;
+}
+.blackBg{
+	background:#4f4f4f;
+	width:140px;
+	height:140px;
+	border-radius:50%;
+	margin:-70px 0px 0px -70px;
+	position:absolute;
+	left:50%;
+	top:50%
+}
+.gearSmall{
+	width:60px;
+	height:60px;
+	background:url(../images/small.png) no-repeat;
+	background-size:60px 60px;
+	margin:-30px 0px 0px -30px;
+	position:absolute;
+	left:50%;
+	top:50%
+}
+.gearBig{
+	width:100px;
+	height:100px;
+	background:url(../images/big.png) no-repeat;
+	background-size:100px 100px;
+	margin:-50px 0px 0px -50px;
+	position:absolute;
+	left:50%;
+	top:50%
+}
+.shadow{
+	width:120px;
+	height:120px;
+	margin:-60px 0px 0px -60px;
+	background:url(../images/shadow.png) no-repeat;
+	background-size:120px 120px;
+	position:absolute;
+	left:50%;
+	top:50%
+}
+.circle{
+	position: absolute;
+	width:160px;
+	height:160px;
+	left:0px;
+	top:0px;
+	background:url(../images/loddingIcon.png) no-repeat;
+	background-size:160px 160px;
+}
+.startMoveRevolve{
+	-webkit-animation-name: revolveClockwise;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+
+.revolveAnticlockwise{
+	-webkit-animation-name: revolveAnticlockwise;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+
+/**
+ * 顺时针旋转
+ */
+@-webkit-keyframes revolveClockwise {
+	from { -webkit-transform: rotate(0deg) translateZ(0); }
+	to { -webkit-transform: rotate(360deg) translateZ(0); }
+}
+@-moz-keyframes revolveClockwise {
+	from { -moz-transform: rotate(0deg) translateZ(0); }
+	to { -moz-transform: rotate(360deg) translateZ(0); }
+}
+@-ms-keyframes revolveClockwise {
+	from { -ms-transform: rotate(0deg) translateZ(0); }
+	to { -ms-transform: rotate(360deg) translateZ(0); }
+}
+@-o-keyframes revolveClockwise {
+	from { -o-transform: rotate(0deg) translateZ(0); }
+	to { -o-transform: rotate(360deg) translateZ(0); }
+}
+@keyframes revolveClockwise {
+	from { transform: rotate(0deg) translateZ(0); }
+	to { transform: rotate(360deg) translateZ(0); }
+}
+
+/**
+ * 逆时针旋转
+ */
+@-webkit-keyframes revolveAnticlockwise {
+	from { -webkit-transform: rotate(360deg) translateZ(0); }
+	to { -webkit-transform: rotate(0deg) translateZ(0); }
+}
+@-moz-keyframes revolveAnticlockwise {
+	from { -webkit-transform: rotate(360deg) translateZ(0); }
+	to { -webkit-transform: rotate(0deg) translateZ(0); }
+}
+@-ms-keyframes revolveAnticlockwise {
+	from { -webkit-transform: rotate(360deg) translateZ(0); }
+	to { -webkit-transform: rotate(0deg) translateZ(0); }
+}
+@-o-keyframes revolveAnticlockwise {
+	from { -webkit-transform: rotate(360deg) translateZ(0); }
+	to { -webkit-transform: rotate(0deg) translateZ(0); }
+}
+@revolveAnticlockwise {
+	from { -webkit-transform: rotate(360deg) translateZ(0); }
+	to { -webkit-transform: rotate(0deg) translateZ(0); }
+}
+
